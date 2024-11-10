@@ -1,0 +1,42 @@
+---IXeQRmnW---A--
+[21/Oct/2024:18:32:17 +0900] 172950313741.424728 127.0.0.1 36322 127.0.0.1 80
+---IXeQRmnW---B--
+GET /?hoge=%27%20or%201=1; HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ja,en-US;q=0.7,en;q=0.3
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: localhost
+Priority: u=0, i
+
+---IXeQRmnW---D--
+
+---IXeQRmnW---E--
+<!DOCTYPE html>\x0a<html>\x0a<head>\x0a<title>Welcome to nginx!</title>\x0a<style>\x0a    body {\x0a        width: 35em;\x0a        margin: 0 auto;\x0a        font-family: Tahoma, Verdana, Arial, sans-serif;\x0a    }\x0a</style>\x0a</head>\x0a<body>\x0a<h1>Welcome to nginx!</h1>\x0a<p>If you see this page, the nginx web server is successfully installed and\x0aworking. Further configuration is required.</p>\x0a\x0a<p>For online documentation and support please refer to\x0a<a href="http://nginx.org/">nginx.org</a>.<br/>\x0aCommercial support is available at\x0a<a href="http://nginx.com/">nginx.com</a>.</p>\x0a\x0a<p><em>Thank you for using nginx.</em></p>\x0a</body>\x0a</html>\x0a
+
+---IXeQRmnW---F--
+HTTP/1.1 200
+Server: nginx/1.18.0
+Date: Mon, 21 Oct 2024 09:32:17 GMT
+Content-Length: 612
+Content-Type: text/html
+Last-Modified: Mon, 14 Oct 2024 05:23:01 GMT
+Connection: keep-alive
+ETag: "670caab5-264"
+
+---IXeQRmnW---H--
+ModSecurity: Warning. detected SQLi using libinjection. [file "/etc/nginx/modsec/coreruleset-3.3.6/rules/REQUEST-942-APPLICATION-ATTACK-SQLI.conf"] [line "46"] [id "942100"] [rev ""] [msg "SQL Injection Attack Detected via libinjection"] [data "Matched Data: s&1; found within ARGS:hoge: ' or 1=1;"] [severity "2"] [ver "OWASP_CRS/3.3.6"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-sqli"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "capec/1000/152/248/66"] [tag "PCI/6.5.2"] [hostname "127.0.0.1"] [uri "/"] [unique_id "172950313741.424728"] [ref "v11,9"]
+ModSecurity: Warning. Matched "Operator `Ge' with parameter `5' against variable `TX:ANOMALY_SCORE' (Value: `5' ) [file "/etc/nginx/modsec/coreruleset-3.3.6/rules/REQUEST-949-BLOCKING-EVALUATION.conf"] [line "81"] [id "949110"] [rev ""] [msg "Inbound Anomaly Score Exceeded (Total Score: 5)"] [data ""] [severity "2"] [ver "OWASP_CRS/3.3.6"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-generic"] [hostname "127.0.0.1"] [uri "/"] [unique_id "172950313741.424728"] [ref ""]
+
+---IXeQRmnW---I--
+
+---IXeQRmnW---J--
+
+---IXeQRmnW---Z--
+
