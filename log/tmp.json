@@ -1,0 +1,97 @@
+{
+  "transaction": {
+    "client_ip": "10.0.2.5",
+    "time_stamp": "Sat Nov  2 13:14:26 2024",
+    "server_id": "5fefbd02acc00bd02d20d134a906539a7d4f2f4a",
+    "client_port": 51238,
+    "host_ip": "10.0.2.4",
+    "host_port": 80,
+    "unique_id": "17305208668.540800",
+    "request": {
+      "method": "GET",
+      "http_version": 1.1,
+      "uri": "/?hoge=%27%20or%201=1;--",
+      "headers": {
+        "Host": "ctfd.local",
+        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0",
+        "Cookie": "session=0f6f65af-8277-4668-83e3-6a4705cc2796.nHm0o8Xhy39l5eZwpBWRPqpnfJU",
+        "Priority": "u=0, i",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "ja,en-US;q=0.7,en;q=0.3",
+        "Accept-Encoding": "gzip, deflate",
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1"
+      }
+    },
+    "response": {
+      "body": "<!DOCTYPE html>\n<html>\n<head>\n  <title>CTF-demo</title>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <link rel=\"shortcut icon\" href=\"/themes/core-beta/static/img/favicon.ico?d=ea48b6bc\" type=\"image/x-icon\">\n\n  \n\n  \n    <link rel=\"stylesheet\" href=\"/themes/core-beta/static/assets/main.0c7144ba.css\">\n  \n\n  \n\n  <script  src=\"/themes/core-beta/static/assets/color_mode_switcher.52334129.js\"></script>\n\n  <script type=\"text/javascript\">\n      window.init = {\n          'urlRoot': \"\",\n          'csrfNonce': \"323b4bc59b3cb11ec43d9b898dd12b3047549ae8de9450c8463c2e3d22e915e9\",\n          'userMode': \"users\",\n          'userId': 0,\n          'userName': null,\n          'userEmail': null,\n          'teamId': null,\n          'teamName': null,\n          'start': null,\n          'end': null,\n          'themeSettings': null,\n          'eventSounds': [\n            \"/themes/core/static/sounds/notification.webm\",\n            \"/themes/core/static/sounds/notification.mp3\",\n          ],\n      }\n  </script>\n\n  \n</head>\n<body>\n<nav class=\"navbar navbar-expand-md navbar-dark bg-dark fixed-top\">\n  <div class=\"container\">\n    <a href=\"/\" class=\"navbar-brand\">\n      \n        CTF-demo\n      \n    </a>\n\n    <button\n        class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#base-navbars\"\n        aria-controls=\"base-navbars\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"\n    >\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n\n    <div class=\"collapse navbar-collapse\" id=\"base-navbars\">\n      <ul class=\"navbar-nav me-auto\">\n        \n\n        \n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"/users\">\n              ユーザー\n            </a>\n          </li>\n\n          \n        \n\n        \n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"/scoreboard\">\n              スコアボード\n            </a>\n          </li>\n        \n\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/challenges\">\n            課題\n          </a>\n        </li>\n      </ul>\n\n      <hr class=\"d-sm-flex d-md-flex d-lg-none\">\n\n      <ul class=\"navbar-nav ms-md-auto d-block d-sm-flex d-md-flex\">\n        \n\n          \n            <li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"/register\">\n                <span data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" title=\"登録\">\n                  <i class=\"fas fa-user-plus d-none d-md-inline d-lg-none\"></i>\n                </span>\n                <span class=\"d-sm-inline d-md-none d-lg-inline\">\n                  <i class=\"fas fa-user-plus pe-1\"></i>\n                  登録\n                </span>\n              </a>\n            </li>\n          \n\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"/login\">\n              <span data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" title=\"ログイン\">\n                <i class=\"fas fa-sign-in-alt d-none d-md-inline d-lg-none\"></i>\n              </span>\n              <span class=\"d-sm-inline d-md-none d-lg-inline\">\n                <i class=\"fas fa-sign-in-alt pe-1\"></i>\n                ログイン\n              </span>\n            </a>\n          </li>\n        \n        <li class=\"nav-item\">\n          <button class=\"nav-link theme-switch\" type=\"button\">\n            <span data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\" title=\"Toggle theme\">\n              <i class=\"fas fa-sun d-none d-md-inline\"></i>\n            </span>\n            <span class=\"d-sm-inline d-md-none\">\n              <i class=\"fas fa-sun pe-1\"></i>\n              Toggle theme\n            </span>\n          </button>\n        </li>\n      </ul>\n    </div>\n  </div>\n</nav>\n\n<main role=\"main\">\n  \n  <div class=\"container\">\n    <div class=\"row\">\n    <div class=\"col-md-6 offset-md-3\">\n        <img class=\"w-100 mx-auto d-block\" style=\"max-width: 500px;padding: 50px;padding-top: 14vh;\" src=\"/themes/core-beta/static/img/logo.png?d=78bac709\" />\n        <h3 class=\"text-center\">\n            <p>A cool CTF platform from <a href=\"https://ctfd.io\">ctfd.io</a></p>\n            <p>Follow us on social media:</p>\n            <a href=\"https://twitter.com/ctfdio\"><i class=\"fab fa-twitter fa-2x\" aria-hidden=\"true\"></i></a>&nbsp;\n            <a href=\"https://facebook.com/ctfdio\"><i class=\"fab fa-facebook fa-2x\" aria-hidden=\"true\"></i></a>&nbsp;\n            <a href=\"https://github.com/ctfd\"><i class=\"fab fa-github fa-2x\" aria-hidden=\"true\"></i></a>\n        </h3>\n        <br>\n        <h4 class=\"text-center\">\n            <a href=\"admin\">Click here</a> to login and setup your CTF\n        </h4>\n    </div>\n</div>\n\n  </div>\n\n</main>\n\n<footer class=\"footer\">\n  <div class=\"container text-center\">\n    <a href=\"https://ctfd.io\" class=\"text-secondary\">\n      <small class=\"text-muted\">\n        Powered by CTFd\n      </small>\n    </a>\n  </div>\n</footer>\n\n<div x-data>\n  <div class=\"position-fixed bottom-0 end-0 p-3\" style=\"z-index: 11\">\n    <div x-ref=\"toast\" class=\"toast hide\" role=\"alert\" aria-live=\"assertive\" aria-atomic=\"true\">\n      <div class=\"toast-header\">\n        <strong class=\"me-auto\" x-text=\"$store.toast.title\"></strong>\n        <small>just now</small>\n        <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"toast\" aria-label=\"Close\"></button>\n      </div>\n      <div class=\"toast-body\" x-html=\"$store.toast.html\">\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div x-data>\n  <div class=\"modal fade\" x-ref=\"modal\" tabindex=\"-1\">\n    <div class=\"modal-dialog\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h5 class=\"modal-title\" x-text=\"$store.modal.title\"></h5>\n          <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>\n        </div>\n        <div class=\"modal-body\">\n          <p x-html=\"$store.modal.html\"></p>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-primary\" data-bs-dismiss=\"modal\">Got it!</button>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n  <script type=\"module\"  src=\"/themes/core-beta/static/assets/index.2e31e3b8.js\"></script><script type=\"module\"  src=\"/themes/core-beta/static/assets/page.3c5083de.js\"></script>\n\n\n\n\n\n</body>\n</html>",
+      "http_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Sat, 02 Nov 2024 04:14:26 GMT",
+        "Content-Length": "6242",
+        "Content-Type": "text/html; charset=utf-8",
+        "Connection": "keep-alive",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups"
+      }
+    },
+    "producer": {
+      "modsecurity": "ModSecurity v3.0.13 (Linux)",
+      "connector": "ModSecurity-nginx v1.0.3",
+      "secrules_engine": "DetectionOnly",
+      "components": [
+        "OWASP_CRS/3.3.6\""
+      ]
+    },
+    "messages": [
+      {
+        "message": "SQL Injection Attack Detected via libinjection",
+        "details": {
+          "match": "detected SQLi using libinjection.",
+          "reference": "v11,11",
+          "ruleId": "942100",
+          "file": "/etc/nginx/modsec/coreruleset-3.3.6/rules/REQUEST-942-APPLICATION-ATTACK-SQLI.conf",
+          "lineNumber": "46",
+          "data": "Matched Data: s&1;c found within ARGS:hoge: ' or 1=1;--",
+          "severity": "2",
+          "ver": "OWASP_CRS/3.3.6",
+          "rev": "",
+          "tags": [
+            "application-multi",
+            "language-multi",
+            "platform-multi",
+            "attack-sqli",
+            "paranoia-level/1",
+            "OWASP_CRS",
+            "capec/1000/152/248/66",
+            "PCI/6.5.2"
+          ],
+          "maturity": "0",
+          "accuracy": "0"
+        }
+      },
+      {
+        "message": "Inbound Anomaly Score Exceeded (Total Score: 5)",
+        "details": {
+          "match": "Matched \"Operator `Ge' with parameter `5' against variable `TX:ANOMALY_SCORE' (Value: `5' )",
+          "reference": "",
+          "ruleId": "949110",
+          "file": "/etc/nginx/modsec/coreruleset-3.3.6/rules/REQUEST-949-BLOCKING-EVALUATION.conf",
+          "lineNumber": "81",
+          "data": "",
+          "severity": "2",
+          "ver": "OWASP_CRS/3.3.6",
+          "rev": "",
+          "tags": [
+            "application-multi",
+            "language-multi",
+            "platform-multi",
+            "attack-generic"
+          ],
+          "maturity": "0",
+          "accuracy": "0"
+        }
+      }
+    ]
+  }
+}
