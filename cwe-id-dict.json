@@ -1,0 +1,140 @@
+{
+  "cwe": [
+    {
+      "cwe-id": "CWE-16",
+      "alias": [
+        "Configuration Management",
+        "環境設定"
+      ]
+    },
+    {
+      "cwe-id": "CWE-20",
+      "alias": [
+        "Improper Input Validation",
+        "不適切な入力確認"
+      ]
+    },
+    {
+      "cwe-id": "CWE-22",
+      "alias": [
+        "Path Traversal",
+        "パス・トラバーサル"
+      ]
+    },
+    {
+      "cwe-id": "CWE-59",
+      "alias": [
+        "Link Following",
+        "リンク解釈の問題"
+      ]
+    },
+    {
+      "cwe-id": "CWE-78",
+      "alias": [
+        "OS Command Injection",
+        "OSコマンド・インジェクション"
+      ]
+    },
+    {
+      "cwe-id": "CWE-79",
+      "alias": [
+        "Cross-Site Scripting",
+        "クロスサイト・スクリプティング",
+        "XSS"
+      ]
+    },
+    {
+      "cwe-id": "CWE-89",
+      "alias": [
+        "SQL Injection",
+        "SQLインジェクション",
+        "SQLi"
+      ]
+    },
+    {
+      "cwe-id": "CWE-94",
+      "alias": [
+        "Code Injection",
+        "コード・インジェクション"
+      ]
+    },
+    {
+      "cwe-id": "CWE-119",
+      "alias": [
+        "Buffer Overflow",
+        "バッファエラー"
+      ]
+    },
+    {
+      "cwe-id": "CWE-134",
+      "alias": [
+        "Format String Vulnerability",
+        "書式文字列の問題"
+      ]
+    },
+    {
+      "cwe-id": "CWE-189",
+      "alias": [
+        "cwe-ideric Errors",
+        "数値処理の問題"
+      ]
+    },
+    {
+      "cwe-id": "CWE-200",
+      "alias": [
+        "Information Exposure",
+        "情報漏えい"
+      ]
+    },
+    {
+      "cwe-id": "CWE-255",
+      "alias": [
+        "Credentials Management",
+        "証明書・パスワード管理"
+      ]
+    },
+    {
+      "cwe-id": "CWE-264",
+      "alias": [
+        "Permissions, Privileges, and Access Controls",
+        "認可・権限・アクセス制御"
+      ]
+    },
+    {
+      "cwe-id": "CWE-287",
+      "alias": [
+        "Improper Authentication",
+        "不適切な認証"
+      ]
+    },
+    {
+      "cwe-id": "CWE-310",
+      "alias": [
+        "Cryptographic Issues",
+        "暗号の問題"
+      ]
+    },
+    {
+      "cwe-id": "CWE-352",
+      "alias": [
+        "Cross-Site Request Forgery",
+        "クロスサイト・リクエスト・フォージェリ",
+        "CSRF"
+      ]
+    },
+    {
+      "cwe-id": "CWE-362",
+      "alias": [
+        "Race Condition",
+        "競合状態"
+      ]
+    },
+    {
+      "cwe-id": "CWE-399",
+      "alias": [
+        "Resource Management Errors",
+        "リソース管理の問題"
+      ]
+    }
+  ]
+}
