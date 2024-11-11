@@ -40,15 +40,28 @@ def main() -> None:
                     "unique_id": unique_id,
                     "request": req,
                     "response": res,
-                    "messages": messages,
+                    "messages": list(map(parse_message, messages)),
                 }
             )
 
     # pprint(parsed_data)
-    print(len(data), len(parsed_data))
+    # print(len(data), len(parsed_data))
 
-    for d in parsed_data:
-        pprint(d.get("messages", []))
+    # for d in parsed_data:
+    #     pprint(d.get("messages", []))
+
+
+def parse_message(message: dict) -> dict:
+    message_str: str = message["message"]
+    message_match: str = message["details"]["match"]
+    message_file: str = message["details"]["file"]
+    message_tags: list[str] = message["details"]["tags"]
+    return {
+        "message": message_str,
+        "match": message_match,
+        "file": message_file,
+        "tags": message_tags,
+    }
 
 
 def parse_date(date_str: str) -> datetime:
