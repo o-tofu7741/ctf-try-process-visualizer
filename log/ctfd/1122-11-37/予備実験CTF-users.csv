@@ -1,0 +1,6 @@
+id,oauth_id,name,password,email,type,secret,website,affiliation,country,bracket_id,hidden,banned,verified,language,team_id,created
+1,,admin,"$bcrypt-sha256$v=2,t=2b,r=12$5m7unap7UwPdtajrKa0Euu$oeI/1v3Kh/5nXDC5vcZ56EK8eiGN1W.",test@example.com,admin,,,,,,True,False,False,ja,,2024-11-14 07:45:12.751121
+2,,endo,"$bcrypt-sha256$v=2,t=2b,r=12$hSKcomRVxXXcDU4vmbTOle$j77Q85BWFgBhF52iwgz78t9KDjGN3ku",21j5023@stu.meisei-u.ac.jp,user,,,,,,False,False,False,,,2024-11-14 19:35:39.502501
+3,,Daichi_Suzuoki,"$bcrypt-sha256$v=2,t=2b,r=12$fGNC8IhA0wJ/DoKaozISne$4I5FI.9sRsbTaegCtMu7tO.On7IKCfK",22j5085@stu.meisei-u.ac.jp,user,,,,,,False,False,False,,,2024-11-19 03:49:38.994115
+4,,杉山翔,"$bcrypt-sha256$v=2,t=2b,r=12$OhkvCciHVbvfltGzp5Bw9.$pG1uWJ3whGOK.Q1x1nKJ44dWfVjJukq",22j5084@stu.meisei-u.ac.jp,user,,,,,,False,False,False,,,2024-11-19 05:33:11.216523
+5,,aoba,"$bcrypt-sha256$v=2,t=2b,r=12$UavG.AbmtKDgiSFNiTjqme$lIA6YTgYMIJ8ABisUr9RsEpLm677SyC",21j5029@stu.meisei-u.ac.jp,user,,,,,,False,False,False,,,2024-11-22 01:37:55.823850

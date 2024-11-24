@@ -1,0 +1,53 @@
+id,name,description,attribution,connection_info,next_id,max_attempts,value,category,type,state,requirements
+1,unzip,"# Unzip
+## 問題文
+- Unzip Your .zip Archive Like a Pro.
+- アップロードできる１つのファイルの最大サイズは1MBです。
+- [問題サーバ](http://192.168.178.131/)
+
+## 実験上の注意
+- インターネット上に公開されている、SECCON Beginners CTF 2020の本問題のwriteup(解答・解法)は閲覧しないでください。
+- 演習中に上記以外について(攻撃手法など)、インターネットで調べることは可能です。
+	- インターネットで調べる際は、配布した拡張機能を導入してください。
+- 内部コードが提供されている場合、`docker compose`などを使ってローカルにサービスを立ち上げることができます。しかし、可能な限り問題サーバへ直接攻撃をしてください。
+
+ ## 問題の出典
+- [SECCON Beginners CTF 2020](https://github.com/SECCON/Beginners_CTF_2020)
+- サイト内部に解法が記載されているので、極力閲覧しないでください。
+
+## 問題ファイルのダウンロード
+- 内部コードなどが見たい場合は、以下のダウンロードリンクから取得してください。",,,,0,50,web,standard,visible,
+2,ssrforlfi,"# ssrforlfi
+## Question
+- SSRF？ LFI？ ひょっとしてRCE？
+- [問題サーバ](http://192.168.178.132/)
+
+## 実験上の注意
+- インターネット上に公開されている、SECCON Beginners CTF 2020の本問題のwriteup(解答・解法)は閲覧しないでください。
+- 演習中に上記以外について(攻撃手法など)、インターネットで調べることは可能です。
+	- インターネットで調べる際は、配布した拡張機能を導入してください。
+- 内部コードが提供されている場合、`docker compose`などを使ってローカルにサービスを立ち上げることができます。しかし、可能な限り問題サーバへ直接攻撃をしてください。
+
+## 問題の出典
+- [SECCON Beginners CTF 2024](https://github.com/SECCON/SECCON_Beginners_CTF_2024)
+- サイト内部に解法が記載されているので、極力閲覧しないでください。
+
+## 問題ファイルのダウンロード
+- 内部コードなどが見たい場合は、以下のダウンロードリンクから取得してください。",,,,0,50,web,standard,visible,
+3,tweetstore,"# tweetstore
+## 問題文
+- Search your flag!
+- [問題サーバ](http://192.168.178.133/)
+
+## 実験上の注意
+- インターネット上に公開されている、SECCON Beginners CTF 2020の本問題のwriteup(解答・解法)は閲覧しないでください。
+- 演習中に上記以外について(攻撃手法など)、インターネットで調べることは可能です。
+	- インターネットで調べる際は、配布した拡張機能を導入してください。
+- 内部コードが提供されている場合、`docker compose`などを使ってローカルにサービスを立ち上げることができます。しかし、可能な限り問題サーバへ直接攻撃をしてください。
+
+## 問題の出典
+- [SECCON Beginners CTF 2020](https://github.com/SECCON/Beginners_CTF_2020)
+- サイト内部に解法が記載されているので、極力閲覧しないでください。
+
+## 問題ファイルのダウンロード
+- 内部コードなどが見たい場合は、以下のダウンロードリンクから取得してください。",,,,0,50,web,standard,visible,

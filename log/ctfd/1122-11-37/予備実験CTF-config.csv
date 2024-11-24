@@ -1,0 +1,52 @@
+id,key,value
+1,ctf_version,3.7.4
+2,ctf_theme,core-beta
+3,dynamic_challenges_alembic_version,eb68f277ab61
+4,ctf_name,予備実験CTF
+5,ctf_description,時間無制限のCTFです。
+6,user_mode,users
+7,start,
+8,end,
+9,freeze,
+10,challenge_visibility,public
+11,registration_visibility,public
+12,score_visibility,public
+13,account_visibility,public
+14,verify_emails,false
+15,team_size,1
+16,mail_server,
+17,mail_port,
+18,mail_tls,
+19,mail_ssl,
+20,mail_username,
+21,mail_password,
+22,mail_useauth,
+23,verification_email_subject,Confirm your account for {ctf_name}
+24,verification_email_body,"Welcome to {ctf_name}!
+
+Click the following link to confirm and activate your account:
+{url}
+
+If the link is not clickable, try copying and pasting it into your browser."
+25,successful_registration_email_subject,Successfully registered for {ctf_name}
+26,successful_registration_email_body,You've successfully registered for {ctf_name}!
+27,user_creation_email_subject,Message from {ctf_name}
+28,user_creation_email_body,"A new account has been created for you for {ctf_name} at {url}. 
+
+Username: {name}
+Password: {password}"
+29,password_reset_subject,Password Reset Request from {ctf_name}
+30,password_reset_body,"Did you initiate a password reset on {ctf_name}? If you didn't initiate this request you can ignore this email. 
+
+Click the following link to reset your password:
+{url}
+
+If the link is not clickable, try copying and pasting it into your browser."
+31,password_change_alert_subject,Password Change Confirmation for {ctf_name}
+32,password_change_alert_body,"Your password for {ctf_name} has been changed.
+
+If you didn't request a password change you can reset your password here: {url}"
+33,setup,1
+34,version_latest,
+35,next_update_check,1732281327
+36,default_locale,ja
