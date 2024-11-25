@@ -112,6 +112,7 @@ name = "ctf-try-process-visualizer"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "chardet" },
     { name = "dash" },
     { name = "networkx" },
     { name = "pandas" },
@@ -125,6 +126,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "chardet", specifier = ">=5.2.0" },
     { name = "dash", specifier = ">=2.18.2" },
     { name = "networkx", specifier = ">=3.4.2" },
     { name = "pandas", specifier = ">=2.2.3" },

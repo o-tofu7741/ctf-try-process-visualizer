@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "chardet>=5.2.0",
     "dash>=2.18.2",
     "networkx>=3.4.2",
     "pandas>=2.2.3",

@@ -2,23 +2,33 @@ import json
 from datetime import datetime
 from pprint import pprint
 
+import chardet
+
 
 def main() -> list[dict]:
     # Path to the JSON file
-    json_log_filepath = "log/modsec_audit.json"
     json_cwe_filepath = "data/cwe-id-dict.json"
+    json_log_filepath = "log/servers/server-1-modsec_audit-1122-1223.json"
 
-    with open(json_cwe_filepath, "r", encoding="utf-8") as file:
+    # List of messages to ignore
+    ignore_cwe_messages = ["Host header is a numeric IP address"]
+
+    with open(
+        json_cwe_filepath, "r", encoding=detect_encoding(json_cwe_filepath)
+    ) as file:
         cwe_dict = json.load(file)
 
     # Read and parse the JSON file
     data: list[dict] = []
-    with open(json_log_filepath, "r", encoding="utf-8") as file:
+    with open(
+        json_log_filepath, "r", encoding=detect_encoding(json_log_filepath)
+    ) as file:
         for line in file:
             data.append(json.loads(line))
 
     # Parse the data
     parsed_data = []
+
     for transaction in data:
         try:
             tr: dict = transaction["transaction"]
@@ -30,10 +40,16 @@ def main() -> list[dict]:
             req: dict = tr["request"]
             res: dict = tr["response"]
 
-            messages: list[dict] = tr["messages"]
+            messages: list[dict] = list(
+                filter(
+                    lambda x: x["message"] not in ignore_cwe_messages,
+                    tr["messages"],
+                )
+            )
             if len(messages) == 0:
                 raise Exception("No messages found")
-        except Exception as e:
+
+        except Exception:
             # print(e)
             continue
         else:
@@ -67,7 +83,6 @@ def parse_message(message: dict) -> dict:
 
 
 def find_cwe_id(message: dict, cwe_dict: dict) -> str:
-    # Simple example: find the first CWE-ID that matches a keyword in the message
     cwe_id_list: dict[str, int] = {}
 
     for cwe in cwe_dict["cwe"]:
@@ -88,6 +103,12 @@ def find_cwe_id(message: dict, cwe_dict: dict) -> str:
 def parse_date(date_str: str) -> datetime:
     date_format = "%a %b %d %H:%M:%S %Y"
     return datetime.strptime(date_str, date_format)
+
+
+def detect_encoding(file_path: str) -> str:
+    with open(file_path, "rb") as f:
+        enc = chardet.detect(f.read())["encoding"] or "utf-8"
+    return enc
 
 
 if __name__ == "__main__":
