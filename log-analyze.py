@@ -1,12 +1,11 @@
 import json
 from datetime import datetime
 from pprint import pprint
-from typing import List, Dict
 
 import chardet
 
 
-def main() -> List[Dict]:
+def parse_audit_logs() -> list[dict]:
     # Path to the JSON file
     json_cwe_filepath = "data/cwe-id-dict.json"
     json_log_filepath = "log/servers/server-1-modsec_audit-1122-1223.json"
@@ -20,7 +19,7 @@ def main() -> List[Dict]:
         cwe_dict = json.load(file)
 
     # Read and parse the JSON file
-    data: List[Dict] = []
+    data: list[dict] = []
     with open(
         json_log_filepath, "r", encoding=detect_encoding(json_log_filepath)
     ) as file:
@@ -113,4 +112,4 @@ def detect_encoding(file_path: str) -> str:
 
 
 if __name__ == "__main__":
-    pprint(main())
+    pprint(parse_audit_logs())
