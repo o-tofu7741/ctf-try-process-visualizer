@@ -1,11 +1,12 @@
 import json
 from datetime import datetime
 from pprint import pprint
+from typing import List, Dict
 
 import chardet
 
 
-def main() -> list[dict]:
+def main() -> List[Dict]:
     # Path to the JSON file
     json_cwe_filepath = "data/cwe-id-dict.json"
     json_log_filepath = "log/servers/server-1-modsec_audit-1122-1223.json"
@@ -19,7 +20,7 @@ def main() -> list[dict]:
         cwe_dict = json.load(file)
 
     # Read and parse the JSON file
-    data: list[dict] = []
+    data: List[Dict] = []
     with open(
         json_log_filepath, "r", encoding=detect_encoding(json_log_filepath)
     ) as file:
@@ -31,26 +32,26 @@ def main() -> list[dict]:
 
     for transaction in data:
         try:
-            tr: dict = transaction["transaction"]
-            client_ip: str = tr["client_ip"]
-            time_stamp: str = tr["time_stamp"]
+            transaction_details: dict = transaction["transaction"]
+            client_ip: str = transaction_details["client_ip"]
+            time_stamp: str = transaction_details["time_stamp"]
 
-            unique_id: str = tr["unique_id"]
+            unique_id: str = transaction_details["unique_id"]
 
-            req: dict = tr["request"]
-            res: dict = tr["response"]
+            req: dict = transaction_details["request"]
+            res: dict = transaction_details["response"]
 
             messages: list[dict] = list(
                 filter(
                     lambda x: x["message"] not in ignore_cwe_messages,
-                    tr["messages"],
+                    transaction_details["messages"],
                 )
             )
             if len(messages) == 0:
                 raise Exception("No messages found")
 
-        except Exception:
-            # print(e)
+        except Exception as e:
+            print(f"Error processing transaction: {e}")
             continue
         else:
             parsed_data.append(
