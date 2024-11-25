@@ -1,11 +1,11 @@
 import pandas as pd
 import networkx as nx
 import plotly.graph_objects as go
-from analyze import main as analyze_logs
+from analyze import parse_audit_logs
 
 # 1. データの読み込みと前処理
-# log-analyze.pyのmain関数を呼び出してデータを取得
-log_data = analyze_logs()
+# analyze.pyのparse_audit_logs関数を呼び出してデータを取得
+log_data = parse_audit_logs()
 
 # データをDataFrameに変換
 log_df = pd.DataFrame(log_data)
