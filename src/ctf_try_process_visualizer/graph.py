@@ -1,26 +1,30 @@
 import pandas as pd
 import networkx as nx
 import plotly.graph_objects as go
+from analyze import main as analyze_logs
 
 # 1. データの読み込みと前処理
-# ログデータを読み込む（例としてCSVファイルを使用）
-log_data = pd.read_csv('log_data.csv')
+# log-analyze.pyのmain関数を呼び出してデータを取得
+log_data = analyze_logs()
+
+# データをDataFrameに変換
+log_df = pd.DataFrame(log_data)
 
 # タイムスタンプをdatetime型に変換
-log_data['timestamp'] = pd.to_datetime(log_data['timestamp'])
+log_df['time_stamp'] = pd.to_datetime(log_df['time_stamp'])
 
 # CTF開始時刻とFLAG取得時刻を特定
-ctf_start_time = log_data['timestamp'].min()
-flag_time = log_data[log_data['cwe_id'] == 'FLAG']['timestamp'].min()
+ctf_start_time = log_df['time_stamp'].min()
+flag_time = log_df[log_df['cwe_id'] == 'FLAG']['time_stamp'].min()
 
 # 通信元IPごとにグループ化し、CWE-idの遷移を記録
-grouped_data = log_data.groupby('source_ip')['cwe_id'].apply(list)
+grouped_data = log_df.groupby('client_ip')['cwe_id'].apply(list)
 
 # 2. グラフの構築
 G = nx.DiGraph()
 
 # CWE-idをノードとして追加
-for cwe_id in log_data['cwe_id'].unique():
+for cwe_id in log_df['cwe_id'].unique():
     G.add_node(cwe_id)
 
 # CTF開始ノードとFLAGノードを追加
@@ -79,7 +83,7 @@ fig = go.Figure(data=edge_trace + [node_trace],
                     titlefont_size=16,
                     showlegend=False,
                     hovermode='closest',
-                    margin=dict(b=20,l=5,r=5,t=40),
+                    margin=dict(b=20, l=5, r=5, t=40),
                     annotations=[dict(
                         text="CWE-id遷移グラフ",
                         showarrow=False,
