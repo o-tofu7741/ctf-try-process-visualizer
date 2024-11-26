@@ -7,18 +7,15 @@ from analyze import parse_audit_logs
 # analyze.pyのparse_audit_logs関数を呼び出してデータを取得
 log_data = parse_audit_logs()
 
-# データをDataFrameに変換
-log_df = pd.DataFrame(log_data)
+# 必要なデータを抽出
+log_df = pd.DataFrame(log_data, columns=['client_ip', 'time_stamp', 'cwe_id'])
 
 # タイムスタンプをdatetime型に変換
 log_df['time_stamp'] = pd.to_datetime(log_df['time_stamp'])
 
-# CTF開始時刻とFLAG取得時刻を特定
-ctf_start_time = log_df['time_stamp'].min()
-flag_time = log_df[log_df['cwe_id'] == 'FLAG']['time_stamp'].min()
-
 # 通信元IPごとにグループ化し、CWE-idの遷移を記録
-grouped_data = log_df.groupby('client_ip')['cwe_id'].apply(list)
+grouped_data = log_df.groupby('client_ip').apply(lambda x: x.sort_values('time_stamp')).reset_index(drop=True)
+grouped_data = grouped_data.groupby('client_ip')['cwe_id'].apply(list)
 
 # 2. グラフの構築
 G = nx.DiGraph()
@@ -71,8 +68,15 @@ node_trace = go.Scatter(
     )
 )
 
+# ノードの位置をtime_stampに基づいて設定
 for node in G.nodes():
-    x, y = pos[node]
+    if node == 'CTF_START':
+        x, y = 0, log_df['time_stamp'].min().timestamp()
+    elif node == 'FLAG':
+        x, y = 0, log_df['time_stamp'].max().timestamp()
+    else:
+        x, y = pos[node]
+        y = log_df[log_df['cwe_id'] == node]['time_stamp'].mean().timestamp()
     node_trace['x'] += (x,)
     node_trace['y'] += (y,)
     node_trace['text'] += (f'CWE-id: {node}',)
@@ -90,7 +94,7 @@ fig = go.Figure(data=edge_trace + [node_trace],
                         xref="paper", yref="paper"
                     )],
                     xaxis=dict(showgrid=False, zeroline=False),
-                    yaxis=dict(showgrid=False, zeroline=False))
+                    yaxis=dict(showgrid=False, zeroline=False, autorange='reversed'))
                 )
 
 fig.show()
