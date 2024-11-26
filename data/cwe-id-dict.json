@@ -2,42 +2,42 @@
   "cwe": [
     {
       "cwe-id": "CWE-16",
-      "alias": [
+      "aliases": [
         "Configuration Management",
         "環境設定"
       ]
     },
     {
       "cwe-id": "CWE-20",
-      "alias": [
+      "aliases": [
         "Improper Input Validation",
         "不適切な入力確認"
       ]
     },
     {
       "cwe-id": "CWE-22",
-      "alias": [
+      "aliases": [
         "Path Traversal",
         "パス・トラバーサル"
       ]
     },
     {
       "cwe-id": "CWE-59",
-      "alias": [
+      "aliases": [
         "Link Following",
         "リンク解釈の問題"
       ]
     },
     {
       "cwe-id": "CWE-78",
-      "alias": [
+      "aliases": [
         "OS Command Injection",
         "OSコマンド・インジェクション"
       ]
     },
     {
       "cwe-id": "CWE-79",
-      "alias": [
+      "aliases": [
         "Cross-Site Scripting",
         "クロスサイト・スクリプティング",
         "XSS"
@@ -45,7 +45,7 @@
     },
     {
       "cwe-id": "CWE-89",
-      "alias": [
+      "aliases": [
         "SQL Injection",
         "SQLインジェクション",
         "SQLi"
@@ -53,70 +53,70 @@
     },
     {
       "cwe-id": "CWE-94",
-      "alias": [
+      "aliases": [
         "Code Injection",
         "コード・インジェクション"
       ]
     },
     {
       "cwe-id": "CWE-119",
-      "alias": [
+      "aliases": [
         "Buffer Overflow",
         "バッファエラー"
       ]
     },
     {
       "cwe-id": "CWE-134",
-      "alias": [
+      "aliases": [
         "Format String Vulnerability",
         "書式文字列の問題"
       ]
     },
     {
       "cwe-id": "CWE-189",
-      "alias": [
+      "aliases": [
         "cwe-ideric Errors",
         "数値処理の問題"
       ]
     },
     {
       "cwe-id": "CWE-200",
-      "alias": [
+      "aliases": [
         "Information Exposure",
         "情報漏えい"
       ]
     },
     {
       "cwe-id": "CWE-255",
-      "alias": [
+      "aliases": [
         "Credentials Management",
         "証明書・パスワード管理"
       ]
     },
     {
       "cwe-id": "CWE-264",
-      "alias": [
+      "aliases": [
         "Permissions, Privileges, and Access Controls",
         "認可・権限・アクセス制御"
       ]
     },
     {
       "cwe-id": "CWE-287",
-      "alias": [
+      "aliases": [
         "Improper Authentication",
         "不適切な認証"
       ]
     },
     {
       "cwe-id": "CWE-310",
-      "alias": [
+      "aliases": [
         "Cryptographic Issues",
         "暗号の問題"
       ]
     },
     {
       "cwe-id": "CWE-352",
-      "alias": [
+      "aliases": [
         "Cross-Site Request Forgery",
         "クロスサイト・リクエスト・フォージェリ",
         "CSRF"
@@ -124,14 +124,14 @@
     },
     {
       "cwe-id": "CWE-362",
-      "alias": [
+      "aliases": [
         "Race Condition",
         "競合状態"
       ]
     },
     {
       "cwe-id": "CWE-399",
-      "alias": [
+      "aliases": [
         "Resource Management Errors",
         "リソース管理の問題"
       ]
