@@ -1,0 +1,635 @@
+{
+  "cwe": [
+    {
+      "cwe-id": "CWE-15",
+      "aliases": [
+        "external control of system or configuration setting"
+      ]
+    },
+    {
+      "cwe-id": "CWE-22",
+      "aliases": [
+        "improper limitation of a pathname to a restricted directory ('path traversal')",
+        "directory traversal",
+        "path traversal"
+      ]
+    },
+    {
+      "cwe-id": "CWE-23",
+      "aliases": [
+        "relative path traversal",
+        "zip slip"
+      ]
+    },
+    {
+      "cwe-id": "CWE-59",
+      "aliases": [
+        "improper link resolution before file access ('link following')",
+        "insecure temporary file",
+        "zip slip"
+      ]
+    },
+    {
+      "cwe-id": "CWE-73",
+      "aliases": [
+        "external control of file name or path"
+      ]
+    },
+    {
+      "cwe-id": "CWE-78",
+      "aliases": [
+        "improper neutralization of special elements used in an os command ('os command injection')",
+        "shell injection",
+        "shell metacharacters",
+        "os command injection"
+      ]
+    },
+    {
+      "cwe-id": "CWE-79",
+      "aliases": [
+        "improper neutralization of input during web page generation ('cross-site scripting')",
+        "xss",
+        "html injection",
+        "css"
+      ]
+    },
+    {
+      "cwe-id": "CWE-88",
+      "aliases": [
+        "improper neutralization of argument delimiters in a command ('argument injection')"
+      ]
+    },
+    {
+      "cwe-id": "CWE-89",
+      "aliases": [
+        "improper neutralization of special elements used in an sql command ('sql injection')",
+        "sql injection",
+        "sqli"
+      ]
+    },
+    {
+      "cwe-id": "CWE-90",
+      "aliases": [
+        "improper neutralization of special elements used in an ldap query ('ldap injection')"
+      ]
+    },
+    {
+      "cwe-id": "CWE-91",
+      "aliases": [
+        "xml injection (aka blind xpath injection)"
+      ]
+    },
+    {
+      "cwe-id": "CWE-93",
+      "aliases": [
+        "improper neutralization of crlf sequences ('crlf injection')"
+      ]
+    },
+    {
+      "cwe-id": "CWE-94",
+      "aliases": [
+        "improper control of generation of code ('code injection')"
+      ]
+    },
+    {
+      "cwe-id": "CWE-96",
+      "aliases": [
+        "improper neutralization of directives in statically saved code ('static code injection')"
+      ]
+    },
+    {
+      "cwe-id": "CWE-117",
+      "aliases": [
+        "improper output neutralization for logs"
+      ]
+    },
+    {
+      "cwe-id": "CWE-183",
+      "aliases": [
+        "permissive list of allowed inputs",
+        "allowlist",
+        "allow list",
+        "safelist",
+        "safe list",
+        "whitelist",
+        "white list"
+      ]
+    },
+    {
+      "cwe-id": "CWE-184",
+      "aliases": [
+        "incomplete list of disallowed inputs",
+        "denylist",
+        "deny list",
+        "blocklist",
+        "block list",
+        "blacklist",
+        "black list"
+      ]
+    },
+    {
+      "cwe-id": "CWE-201",
+      "aliases": [
+        "insertion of sensitive information into sent data"
+      ]
+    },
+    {
+      "cwe-id": "CWE-209",
+      "aliases": [
+        "generation of error message containing sensitive information"
+      ]
+    },
+    {
+      "cwe-id": "CWE-213",
+      "aliases": [
+        "exposure of sensitive information due to incompatible policies"
+      ]
+    },
+    {
+      "cwe-id": "CWE-223",
+      "aliases": [
+        "omission of security-relevant information"
+      ]
+    },
+    {
+      "cwe-id": "CWE-256",
+      "aliases": [
+        "plaintext storage of a password"
+      ]
+    },
+    {
+      "cwe-id": "CWE-257",
+      "aliases": [
+        "storing passwords in a recoverable format"
+      ]
+    },
+    {
+      "cwe-id": "CWE-260",
+      "aliases": [
+        "password in configuration file"
+      ]
+    },
+    {
+      "cwe-id": "CWE-261",
+      "aliases": [
+        "weak encoding for password"
+      ]
+    },
+    {
+      "cwe-id": "CWE-266",
+      "aliases": [
+        "incorrect privilege assignment"
+      ]
+    },
+    {
+      "cwe-id": "CWE-276",
+      "aliases": [
+        "incorrect default permissions"
+      ]
+    },
+    {
+      "cwe-id": "CWE-280",
+      "aliases": [
+        "improper handling of insufficient permissions or privileges "
+      ]
+    },
+    {
+      "cwe-id": "CWE-288",
+      "aliases": [
+        "authentication bypass using an alternate path or channel"
+      ]
+    },
+    {
+      "cwe-id": "CWE-290",
+      "aliases": [
+        "authentication bypass by spoofing"
+      ]
+    },
+    {
+      "cwe-id": "CWE-294",
+      "aliases": [
+        "authentication bypass by capture-replay"
+      ]
+    },
+    {
+      "cwe-id": "CWE-295",
+      "aliases": [
+        "improper certificate validation"
+      ]
+    },
+    {
+      "cwe-id": "CWE-296",
+      "aliases": [
+        "improper following of a certificate's chain of trust"
+      ]
+    },
+    {
+      "cwe-id": "CWE-302",
+      "aliases": [
+        "authentication bypass by assumed-immutable data"
+      ]
+    },
+    {
+      "cwe-id": "CWE-304",
+      "aliases": [
+        "missing critical step in authentication"
+      ]
+    },
+    {
+      "cwe-id": "CWE-306",
+      "aliases": [
+        "missing authentication for critical function"
+      ]
+    },
+    {
+      "cwe-id": "CWE-307",
+      "aliases": [
+        "improper restriction of excessive authentication attempts"
+      ]
+    },
+    {
+      "cwe-id": "CWE-312",
+      "aliases": [
+        "cleartext storage of sensitive information"
+      ]
+    },
+    {
+      "cwe-id": "CWE-319",
+      "aliases": [
+        "cleartext transmission of sensitive information"
+      ]
+    },
+    {
+      "cwe-id": "CWE-322",
+      "aliases": [
+        "key exchange without entity authentication"
+      ]
+    },
+    {
+      "cwe-id": "CWE-323",
+      "aliases": [
+        "reusing a nonce, key pair in encryption"
+      ]
+    },
+    {
+      "cwe-id": "CWE-324",
+      "aliases": [
+        "use of a key past its expiration date"
+      ]
+    },
+    {
+      "cwe-id": "CWE-325",
+      "aliases": [
+        "missing cryptographic step"
+      ]
+    },
+    {
+      "cwe-id": "CWE-328",
+      "aliases": [
+        "use of weak hash"
+      ]
+    },
+    {
+      "cwe-id": "CWE-331",
+      "aliases": [
+        "insufficient entropy"
+      ]
+    },
+    {
+      "cwe-id": "CWE-335",
+      "aliases": [
+        "incorrect usage of seeds in pseudo-random number generator (prng)"
+      ]
+    },
+    {
+      "cwe-id": "CWE-338",
+      "aliases": [
+        "use of cryptographically weak pseudo-random number generator (prng)"
+      ]
+    },
+    {
+      "cwe-id": "CWE-347",
+      "aliases": [
+        "improper verification of cryptographic signature"
+      ]
+    },
+    {
+      "cwe-id": "CWE-353",
+      "aliases": [
+        "missing support for integrity check"
+      ]
+    },
+    {
+      "cwe-id": "CWE-359",
+      "aliases": [
+        "exposure of private personal information to an unauthorized actor",
+        "privacy violation",
+        "privacy leak",
+        "privacy leakage"
+      ]
+    },
+    {
+      "cwe-id": "CWE-419",
+      "aliases": [
+        "unprotected primary channel"
+      ]
+    },
+    {
+      "cwe-id": "CWE-425",
+      "aliases": [
+        "direct request ('forced browsing')",
+        "forced browsing"
+      ]
+    },
+    {
+      "cwe-id": "CWE-426",
+      "aliases": [
+        "untrusted search path",
+        "untrusted path"
+      ]
+    },
+    {
+      "cwe-id": "CWE-430",
+      "aliases": [
+        "deployment of wrong handler"
+      ]
+    },
+    {
+      "cwe-id": "CWE-434",
+      "aliases": [
+        "unrestricted upload of file with dangerous type",
+        "unrestricted file upload"
+      ]
+    },
+    {
+      "cwe-id": "CWE-444",
+      "aliases": [
+        "inconsistent interpretation of http requests ('http request/response smuggling')",
+        "http request smuggling",
+        "http response smuggling",
+        "http smuggling"
+      ]
+    },
+    {
+      "cwe-id": "CWE-470",
+      "aliases": [
+        "use of externally-controlled input to select classes or code ('unsafe reflection')",
+        "reflection injection"
+      ]
+    },
+    {
+      "cwe-id": "CWE-471",
+      "aliases": [
+        "modification of assumed-immutable data (maid)"
+      ]
+    },
+    {
+      "cwe-id": "CWE-472",
+      "aliases": [
+        "external control of assumed-immutable web parameter",
+        "assumed-immutable parameter tampering"
+      ]
+    },
+    {
+      "cwe-id": "CWE-494",
+      "aliases": [
+        "download of code without integrity check"
+      ]
+    },
+    {
+      "cwe-id": "CWE-497",
+      "aliases": [
+        "exposure of sensitive system information to an unauthorized control sphere"
+      ]
+    },
+    {
+      "cwe-id": "CWE-501",
+      "aliases": [
+        "trust boundary violation"
+      ]
+    },
+    {
+      "cwe-id": "CWE-502",
+      "aliases": [
+        "deserialization of untrusted data",
+        "marshaling, unmarshaling",
+        "pickling, unpickling",
+        "php object injection"
+      ]
+    },
+    {
+      "cwe-id": "CWE-521",
+      "aliases": [
+        "weak password requirements"
+      ]
+    },
+    {
+      "cwe-id": "CWE-523",
+      "aliases": [
+        "unprotected transport of credentials"
+      ]
+    },
+    {
+      "cwe-id": "CWE-532",
+      "aliases": [
+        "insertion of sensitive information into log file"
+      ]
+    },
+    {
+      "cwe-id": "CWE-538",
+      "aliases": [
+        "insertion of sensitive information into externally-accessible file or directory"
+      ]
+    },
+    {
+      "cwe-id": "CWE-540",
+      "aliases": [
+        "inclusion of sensitive information in source code"
+      ]
+    },
+    {
+      "cwe-id": "CWE-547",
+      "aliases": [
+        "use of hard-coded, security-relevant constants"
+      ]
+    },
+    {
+      "cwe-id": "CWE-552",
+      "aliases": [
+        "files or directories accessible to external parties"
+      ]
+    },
+    {
+      "cwe-id": "CWE-565",
+      "aliases": [
+        "reliance on cookies without validation and integrity checking"
+      ]
+    },
+    {
+      "cwe-id": "CWE-601",
+      "aliases": [
+        "url redirection to untrusted site ('open redirect')",
+        "open redirect",
+        "cross-site redirect",
+        "cross-domain redirect",
+        "unvalidated redirect"
+      ]
+    },
+    {
+      "cwe-id": "CWE-611",
+      "aliases": [
+        "improper restriction of xml external entity reference",
+        "xxe"
+      ]
+    },
+    {
+      "cwe-id": "CWE-613",
+      "aliases": [
+        "insufficient session expiration"
+      ]
+    },
+    {
+      "cwe-id": "CWE-620",
+      "aliases": [
+        "unverified password change"
+      ]
+    },
+    {
+      "cwe-id": "CWE-639",
+      "aliases": [
+        "authorization bypass through user-controlled key",
+        "insecure direct object reference",
+        "idor",
+        "broken object level authorization",
+        "bola",
+        "horizontal authorization"
+      ]
+    },
+    {
+      "cwe-id": "CWE-640",
+      "aliases": [
+        "weak password recovery mechanism for forgotten password"
+      ]
+    },
+    {
+      "cwe-id": "CWE-643",
+      "aliases": [
+        "improper neutralization of data within xpath expressions ('xpath injection')"
+      ]
+    },
+    {
+      "cwe-id": "CWE-652",
+      "aliases": [
+        "improper neutralization of data within xquery expressions ('xquery injection')"
+      ]
+    },
+    {
+      "cwe-id": "CWE-756",
+      "aliases": [
+        "missing custom error page"
+      ]
+    },
+    {
+      "cwe-id": "CWE-757",
+      "aliases": [
+        "selection of less-secure algorithm during negotiation ('algorithm downgrade')"
+      ]
+    },
+    {
+      "cwe-id": "CWE-776",
+      "aliases": [
+        "improper restriction of recursive entity references in dtds ('xml entity expansion')",
+        "xee",
+        "billion laughs attack",
+        "xml bomb"
+      ]
+    },
+    {
+      "cwe-id": "CWE-778",
+      "aliases": [
+        "insufficient logging"
+      ]
+    },
+    {
+      "cwe-id": "CWE-798",
+      "aliases": [
+        "use of hard-coded credentials"
+      ]
+    },
+    {
+      "cwe-id": "CWE-807",
+      "aliases": [
+        "reliance on untrusted inputs in a security decision"
+      ]
+    },
+    {
+      "cwe-id": "CWE-829",
+      "aliases": [
+        "inclusion of functionality from untrusted control sphere"
+      ]
+    },
+    {
+      "cwe-id": "CWE-841",
+      "aliases": [
+        "improper enforcement of behavioral workflow"
+      ]
+    },
+    {
+      "cwe-id": "CWE-915",
+      "aliases": [
+        "improperly controlled modification of dynamically-determined object attributes",
+        "mass assignment",
+        "autobinding",
+        "php object injection"
+      ]
+    },
+    {
+      "cwe-id": "CWE-916",
+      "aliases": [
+        "use of password hash with insufficient computational effort"
+      ]
+    },
+    {
+      "cwe-id": "CWE-917",
+      "aliases": [
+        "improper neutralization of special elements used in an expression language statement ('expression language injection')",
+        "el injection"
+      ]
+    },
+    {
+      "cwe-id": "CWE-918",
+      "aliases": [
+        "server-side request forgery (ssrf)",
+        "xspa",
+        "ssrf"
+      ]
+    },
+    {
+      "cwe-id": "CWE-940",
+      "aliases": [
+        "improper verification of source of a communication channel"
+      ]
+    },
+    {
+      "cwe-id": "CWE-1021",
+      "aliases": [
+        "improper restriction of rendered ui layers or frames",
+        "clickjacking",
+        "ui redress attack",
+        "tapjacking"
+      ]
+    },
+    {
+      "cwe-id": "CWE-1104",
+      "aliases": [
+        "use of unmaintained third party components"
+      ]
+    },
+    {
+      "cwe-id": "CWE-1173",
+      "aliases": [
+        "improper use of validation framework"
+      ]
+    }
+  ]
+}
